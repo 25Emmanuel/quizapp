@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main {
+    margin: 40px auto;
+    width: 700px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background: pink;
+    border-radius: 0px 15px 0px 15px;
+}
+button {
+    height: 80px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+#next_button {
+    background: rgb(56, 170, 56);
+}
+#pbutton {
+    margin-bottom: 15px;
+}
+.correct {
+    position: absolute;
+    background: purple;
+    top: 10px;
+    right: 25px;
+}
+.fa-solid {
+    font-size: 25px;
+}
+#corrector {
+    display: none;
+    position: absolute;
+    left: 900px;
+    top: 230px;
+    background: greenyellow;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: grey;
+}
+#corrector p {
+    font-family: 'Cormorant SC', serif;
+    font-size: 10px;
+}
+.enter {
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+}
+#re-try {
+    display: none;
+    position: absolute;
+    left: 900px;
+    top: 230px;
+    background: red;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: black;
+}
+#testp {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+}
