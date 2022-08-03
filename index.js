@@ -51,7 +51,7 @@ function nextQuestion () {
         input.value = ''
     }
     else {
-        var text = document.createTextNode(array[0].question);
+        // var text = document.createTextNode(array[0].question);
         testp.textContent = array[0].question;
         corrector.style.display = "block"
         setInterval(()=> {corrector.style.display = "none"}, 3000)
