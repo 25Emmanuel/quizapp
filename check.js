@@ -1,0 +1,1 @@
+console.log(Object.entries(array[0].option));
