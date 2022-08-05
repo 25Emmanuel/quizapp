@@ -40,6 +40,7 @@ button {
 }
 #pbutton {
     margin-bottom: 15px;
+    background: white;
 }
 .correct {
     position: absolute;
@@ -108,9 +109,8 @@ button {
 }
 @media (max-width:775px) {
     #main {
-        max-width: 375px;
-        max-height: 667px;
-        
+        width: 375px;
+        height: 667px;
     }
     .question-container {
         width: 320px;
@@ -140,10 +140,11 @@ button {
         margin-top: 30px;
     }
 }
-@media (min-height: 450.2px) {
+/* media query for screen size of height: 450.2px(iphone 6) */
+@media (height: 450.2px) {
     #main {
         max-width: 240px;
-        max-height: 767px;
+        height: 767px;
         
     }
     .question-container {
