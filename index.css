@@ -6,7 +6,7 @@
 #main {
     margin: 40px auto;
     width: 700px;
-    min-height: 300px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -15,6 +15,14 @@
     background: pink;
     border-radius: 0px 15px 0px 15px;
 }
+.question-container {
+    width: 100%;
+    height: 30%;
+    
+}
+/* .question-container p {
+    text-align: center;
+} */
 button {
     height: 80px;
     width: 60%;
@@ -25,6 +33,7 @@ button {
 }
 #next_button {
     background: rgb(56, 170, 56);
+    /* margin-top: 35px; */
 }
 #pbutton {
     margin-bottom: 15px;
@@ -38,18 +47,35 @@ button {
 .fa-solid {
     font-size: 25px;
 }
-#corrector, .score {
+#corrector {
     display: none;
     position: absolute;
     left: 900px;
     top: 230px;
     background: greenyellow;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    color: grey;
+    width: 70px;
+    height: 70px;
+    color: black;
 }
-#corrector p, .score p {
+.score {
+    display: none;
+    position: absolute;
+    left: 900px;
+    top: 230px;
+    background: greenyellow;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: black;
+}
+.score p {
+    font-family: 'Cormorant SC', serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#corrector p {
     font-family: 'Cormorant SC', serif;
     font-size: 10px;
 }
@@ -59,6 +85,7 @@ button {
     padding: 5px;
     border-radius: 5px;
     font-family: 'Lora', serif;
+    height: 35px;
 }
 #re-try {
     display: none;
@@ -73,5 +100,40 @@ button {
 }
 #testp {
     font-family: 'Lora', serif;
-    font-size: 34px;
+    font-size: 44px;
+    padding: 40px;
+}
+@media (max-width:775px) {
+    #main {
+        max-width: 375px;
+        max-height: 667px;
+        
+    }
+    .question-container {
+        width: 320px;
+        height: 140px;
+        margin: 60px 28px 27px 50px;
+        text-align: center;
+    }
+    #testp {
+        /* color: white; */
+        width: 100%;
+        height: 100%;
+        font-size: 35px;
+    }
+    .enter {
+        margin-top: 50px;
+    }
+    .button {
+        height: 50px;
+        width: 290px;
+    }
+    #next_button {
+        margin-top: 124px;
+        /* margin-bottom: 60px; */
+    }
+    #pbutton {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 }

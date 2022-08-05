@@ -51,9 +51,10 @@ const tester = () => {
         setInterval(()=> {retry.style.display = "none"}, 3000)
         
         input.value = ''
+        console.log(array);
        
         
-        // test
+        
         array.splice(random_number, 1)
         new_question_selector = Math.floor(Math.random() * (array.length))
         new_question = array[(new_question_selector)].question;
@@ -61,7 +62,7 @@ const tester = () => {
 
         console.log(array);
     } 
-    else if (counter > 0 && input.value !== array[new_question_selector].ans) {
+    else if (counter > 0 && counter < 9 && input.value !== array[new_question_selector].ans) {
         retry.style.display = "block"
         setInterval(()=> {retry.style.display = "none"}, 3000)
         input.value = ''
@@ -74,11 +75,21 @@ const tester = () => {
         testp.innerHTML = new_question;
 
         console.log(array);
+        
+    } else if (counter === 9 && input.value !== array[new_question_selector].ans) {
+        new_question = array[0].question;
+        testp.innerHTML = "thanks for participating";
+        array.splice(new_question_selector, 1)
+        setInterval(() => {document.location.reload()}, 5000)
+        
+        input.value = ''
+        
+        counter++
     }
     else {
         corrector.style.display = "block"
         setInterval(()=> {corrector.style.display = "none"}, 3000)
-        
+        console.log(array);
         
         if (counter === 0) {
             array.splice(random_number, 1)
@@ -88,7 +99,16 @@ const tester = () => {
            
            
         }
-
+        else if (counter === 9 && input.value === array[new_question_selector].ans) {
+            console.log(`counter is equal to: ${counter}`);
+            console.log(array);
+            new_question = array[0].question;
+            testp.innerHTML = "thanks for participating";
+            array.splice(new_question_selector, 1)
+            setInterval(() => {document.location.reload()}, 5000)
+            console.log(array.length);
+        }
+        
 
         else {
             array.splice(new_question_selector, 1)
@@ -107,6 +127,26 @@ const tester = () => {
     
     console.log(`final score: ${score}`);
     console.log(`final counter: ${counter}`);
+
+    
+    scoreDisplay()
+    
+}
+
+function scoreDisplay () {
+    if (array.length === 0) {
+        console.log("i am inside the don side");
+        var scoreHolder = document.querySelector(".score-holder")
+        var displayedScore = document.createTextNode(`${score}/${counter}`)
+        scoreHolder.appendChild(displayedScore)
+        var finalScore = document.querySelector(".score")
+        
+
+        finalScore.style.display = "block"
+        
+        setInterval(()=> {finalScore.style.display = "none"}, 3000)
+
+    }
 }
 
 
