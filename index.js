@@ -2,7 +2,7 @@ var array = [
     {question: "what is the sum of 2 + 3", id: 0, ans: "5"},
     {question: "what is the square-root of 25", id: 1, ans: "5"},
     {question: "what is the 25 degree Celsius in Fahrenheit", id: 2, ans: "77"},
-    {question: "what is the sides a polygon has?", id: 3, ans: "5"},
+    {question: "what number of sides does a regular polygon have?", id: 3, ans: "5"},
     {question: "what is the freezing point of water in Celsius", id: 4, ans: "0"},
     {question: "what is the boiling point of water in Celsius", id: 5, ans: "100"},
     {question: "How many Inches makes a foot", id: 6, ans: "12"},
@@ -78,7 +78,7 @@ const tester = () => {
         
     } else if (counter === 9 && input.value !== array[new_question_selector].ans) {
         new_question = array[0].question;
-        testp.innerHTML = "thanks for participating";
+        testp.innerHTML = "thanks for participating!";
         array.splice(new_question_selector, 1)
         setInterval(() => {document.location.reload()}, 5000)
         
@@ -103,7 +103,7 @@ const tester = () => {
             console.log(`counter is equal to: ${counter}`);
             console.log(array);
             new_question = array[0].question;
-            testp.innerHTML = "thanks for participating";
+            testp.innerHTML = "thanks for participating!";
             array.splice(new_question_selector, 1)
             setInterval(() => {document.location.reload()}, 5000)
             console.log(array.length);
