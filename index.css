@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    background: grey;
+    background: url("./background2.jpg") no-repeat center;
+    /* background: grey; */
 }
 #main {
     margin: 40px auto;
